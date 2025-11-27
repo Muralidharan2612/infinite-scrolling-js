@@ -72,7 +72,7 @@ showPosts();
 window.addEventListener("scroll", () => {
   const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
 
-  if (scrollHeight - scrollTop === clientHeight) {
+  if (scrollTop + clientHeight >= 0.95 * scrollHeight) {
     showLoading();
   }
 });
